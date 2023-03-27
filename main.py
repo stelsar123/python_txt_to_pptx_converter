@@ -9,7 +9,7 @@ import os
 #settings
 black= RGBColor(0,0,0)
 white= RGBColor(250,250,250)
-lexicon = {"1":"first","2":"second","3":"third","4":"fourth","5":"fifth"} #Continue this lexicon so you can fit your maximum number of questions in yoyr files
+lexicon = {"1":"first","2":"second","3":"third","4":"fourth","5":"fifth"} #Continue this lexicon so you can fit your maximum number of questions in your files
 PATH = 'INSERT HERE THE PATH OF THE FILES FOLDER'
 
 #Text alteration function
@@ -59,7 +59,7 @@ def add_slide(prs, layout, questions, index):
 
 
 
-        ## Κείμενο Σημειώσεων
+        #Notes Text
         comments = notes_slide.notes_text_frame
         comments.text = lexicon[f"{index+1}"]+" Question.\n" + text2 
     except:
