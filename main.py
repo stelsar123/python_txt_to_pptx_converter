@@ -10,7 +10,7 @@ import os
 black= RGBColor(0,0,0)
 white= RGBColor(250,250,250)
 lexicon = {"1":"first","2":"second","3":"third","4":"fourth","5":"fifth"} #Continue this lexicon so you can fit your maximum number of questions in yoyr files
-
+PATH = 'INSERT HERE THE PATH OF THE FILES FOLDER'
 
 #Text alteration function
 def fonts(frame, margin_top, margin_left, text, fonts, size , bold, color):
@@ -71,7 +71,7 @@ def load(file, QandA, template):
     try:
         #Create the list of lines in the txt file
         lista =[]
-        with open("E:\\DESKTOP12.03\\python_pptx\\files" + "\\"+ file, "r", encoding="utf_8") as f:
+        with open(PATH + "\\"+ file, "r", encoding="utf_8") as f:
             for line in f:
                 a=line.strip('\n')
                 lista.append(a)
@@ -138,4 +138,4 @@ if __name__=="__main__":
 #Select the template .pptx file
     templ = input("Insert template: ")
     templ = str(templ)
-    load_multiple("E:\\DESKTOP12.03\\python_pptx\\files", templ )
+    load_multiple(PATH, templ )
